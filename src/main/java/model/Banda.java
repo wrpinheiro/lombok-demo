@@ -1,3 +1,5 @@
+package model;
+
 import java.util.List;
 
 public class Banda {
@@ -27,29 +29,5 @@ public class Banda {
 
     public void setIntegrantes(List<String> integrantes) {
         this.integrantes = integrantes;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        Banda banda = (Banda) o;
-
-        return nome.equals(banda.nome);
-    }
-
-    @Override
-    public int hashCode() {
-        return nome.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return this.nome;
     }
 }
