@@ -3,9 +3,11 @@ package filter;
 import static model.Estilo.PAGODAO;
 
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 import model.Banda;
 
+@Slf4j
 public class FiltroPagodao implements FiltroBanda {
 
     private static boolean isPagodao(Banda banda) {
@@ -14,6 +16,7 @@ public class FiltroPagodao implements FiltroBanda {
 
     @Override
     public List<Banda> filtrar(List<Banda> bandas) {
+        log.info("Filtrando pagodao...");
         return filterByPredicate(bandas, FiltroPagodao::isPagodao);
     }
 }

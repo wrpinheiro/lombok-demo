@@ -7,38 +7,50 @@ import static model.Estilo.ROCK_N_ROLL;
 import java.util.List;
 
 import model.Banda;
-import model.Estilo;
 
 public final class DadosTeste {
     private DadosTeste() {
     }
 
-    private static Banda criarBanda(String nome, Estilo estilo,
-                                    String ... integrantes) {
+    public static Banda RUSH = Banda.builder()
+            .nome("Rush").estilo(ROCK_N_ROLL)
+            .integrante("Alex Lifeson")
+            .integrante("Geddy Lee")
+            .integrante("Neil Peart")
+            .build();
 
-        Banda banda = new Banda();
-        banda.setNome(nome);
-        banda.setEstilo(estilo);
+    public static Banda METALLICA = Banda.builder()
+            .nome("Metallica").estilo(ROCK_N_ROLL)
+            .integrante("James")
+            .integrante("Kirk")
+            .integrante("Lars")
+            .integrante("Cliff The Eternal")
+            .build();
 
-        banda.setIntegrantes(asList(integrantes));
+    public static Banda CREAM = Banda.builder()
+            .nome("Cream").estilo(ROCK_N_ROLL)
+            .integrante("Jack Bruce")
+            .integrante("Eric Clapton")
+            .integrante("Ginger Baker")
+            .build();
 
-        return banda;
-    }
+    public static Banda JUDAS_PRIEST = Banda.builder()
+            .nome("Judas Priest").estilo(ROCK_N_ROLL)
+            .integrante("Halford")
+            .integrante("Hill")
+            .integrante("Tipton")
+            .integrante("Faulkner")
+            .integrante("Travis")
+            .build();
 
-    public static Banda RUSH = criarBanda("Rush", ROCK_N_ROLL,
-            "Alex Lifeson", "Geddy Lee", "Neil Peart");
-
-    public static Banda METALLICA = criarBanda("Metallica", ROCK_N_ROLL,
-            "James", "Kirk", "Lars", "Cliff The Eternal");
-
-    public static Banda CREAM = criarBanda("Cream", ROCK_N_ROLL,
-            "Jack Bruce", "Eric Clapton", "Ginger Baker");
-
-    public static Banda JUDAS_PRIEST = criarBanda("Judas Priest", ROCK_N_ROLL,
-            "Halford", "Hill", "Tipton", "Faulkner", "Travis");
-
-    public static Banda MOLEJAO = criarBanda("Molejo", PAGODAO,
-            "Um cara", "Outro cara", "Mais um cara", "Mais um", "Mais um outro");
+    public static Banda MOLEJAO = Banda.builder()
+            .nome("Molejo").estilo(PAGODAO)
+            .integrante("Um cara")
+            .integrante("Outro cara")
+            .integrante("Mais um cara")
+            .integrante("Mais um")
+            .integrante("Mais um outro")
+            .build();
 
     public static List<Banda> TODAS = asList(RUSH, METALLICA, CREAM, JUDAS_PRIEST, MOLEJAO);
 }

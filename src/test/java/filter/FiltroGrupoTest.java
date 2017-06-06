@@ -11,7 +11,6 @@ import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 
-import dadosteste.DadosTeste;
 import model.Banda;
 
 public class FiltroGrupoTest {
